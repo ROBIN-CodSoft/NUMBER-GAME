@@ -9,12 +9,27 @@ int start,last,random_number,i;
 Scanner sc=new Scanner(System.in);
 System.out.println("Enter the maximum attempt in which you finished the Game:");
 i=sc.nextInt();
-
+while(i==0)
+{
+System.out.println("Enter the maximum attempt in which you finished the Game:");
+i=sc.nextInt();
+}
 System.out.println("\nEnter the starting number of range from 1:");
-
 start=sc.nextInt();
+
+while(start==0)
+{
+System.out.println("\nEnter the starting number of range from 1:");
+start=sc.nextInt();
+}
 System.out.println("\nEnter the last number of range:");
 last=sc.nextInt();
+while(last==0)
+{
+System.out.println("\nEnter the last number of range:");
+last=sc.nextInt();
+}
+
 //Random is a anynomous class
 Random r=new Random();//Create a object Of Random class
 random_number=r.nextInt((last-start)+1)+start;
